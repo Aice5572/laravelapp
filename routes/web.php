@@ -19,3 +19,29 @@ Route::get('/', function () {
 Route::get('hello', function () {
     return '<html><body><h1>森です</h1></body></html>';
 });
+
+Route::get('/hello2/{msg?}' , function ($msg='なんもねーよ') {
+
+$html = <<<E0F
+<html>
+<head>
+<title>ドラゴンボール</title>
+<style>
+body {font-size:16pt; color:#999; background-color:#17e6c3; }
+h1{ font-size:100pt; text-align:right; color:#ffd700;
+    margin:-40px 0px -50px 0px; }
+p1{ text-aligin:center; color:#ff1a1a;
+     }
+</style>
+</head>
+<body>
+    <h1>Kamehame-Ha</h1>
+    <p1>{$msg}</p1>
+    <p>界王拳10倍だ～</p>    
+</body>
+</html>
+E0F;
+
+     return $html;
+});
+
