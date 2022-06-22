@@ -16,9 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('hello', function () {
-    return '<html><body><h1>森です</h1></body></html>';
-});
 
 Route::get('/hello2/{msg?}' , function ($msg='なんもねーよ') {
 
@@ -45,3 +42,4 @@ E0F;
      return $html;
 });
 
+Route::get('hello/{$id?}/{$pass?}', 'App\Http\Controllers\hellocontroller@index' );
