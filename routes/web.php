@@ -45,3 +45,4 @@ E0F;
 Route::get('hello', 'App\Http\Controllers\hellocontroller@index' );
 Route::get('hello/other','App\Http\Controllers\hellocontroller@other' );
 
+Route::get('Fight','App\Http\Controllers\FightController@index');
