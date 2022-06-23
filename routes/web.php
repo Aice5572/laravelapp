@@ -42,4 +42,6 @@ E0F;
      return $html;
 });
 
-Route::get('hello/{$id?}/{$pass?}', 'App\Http\Controllers\hellocontroller@index' );
+Route::get('hello', 'App\Http\Controllers\hellocontroller@index' );
+Route::get('hello/other','App\Http\Controllers\hellocontroller@other' );
+
