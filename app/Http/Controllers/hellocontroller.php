@@ -19,7 +19,7 @@ function tag($tag,$txt) {
     return "<{$tag}>" . $txt . "</{$tag}>";
 }
 
-class hellocontroller extends Controller
+class helloController extends Controller
 {
     public function index() {
         global $head, $style, $body, $end;
@@ -30,7 +30,7 @@ class hellocontroller extends Controller
                 . '<a href="/hello/other">go to Other page</a>'
                 . $end;
         return $html;
-}
+    }
 
     public function other () {
         global $head, $style, $body, $end;
