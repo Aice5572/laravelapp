@@ -17,8 +17,8 @@ class FightController extends Controller
     //     return view('fight.index', $data);
     // }
        
-    public function index()
+    public function index(Request $request)
     {
-      return view('fight.index', ['message'=>'Hello!']);
+      return view('fight.index', ['data'=>$request->data]);
     }
 }

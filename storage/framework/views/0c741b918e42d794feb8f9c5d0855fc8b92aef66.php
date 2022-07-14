@@ -9,10 +9,12 @@
 
 <?php $__env->startSection('content'); ?>
     <p>ここが本文のコンテンツです。</p>
-    <p>Controller value<br>'message' = <?php echo e($message); ?></p>
-    <p>ViewComposer value<br>'view_message' =<?php echo e($view_message); ?>
-
-        </p>
+    <table>
+    <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <tr><th><?php echo e($item['name']); ?></th><td><?php echo e($item['mail']); ?></td></tr>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+    </table>
+    
 
 <?php $__env->stopSection(); ?>
 
