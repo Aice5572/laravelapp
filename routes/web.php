@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Middleware\FightMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,6 +46,7 @@ E0F;
 Route::get('hello', 'App\Http\Controllers\helloController@index' );
 Route::get('hello/other','App\Http\Controllers\helloController@other' );
 
-//Route::get('Fight/{id?}', 'App\Http\Controllers\FightController@index');
-//Route::post('Fight','App\Http\Controllers\FightController@post');
-Route::get('Fight','App\Http\Controllers\FightController@index');
+
+Route::get('Fight','App\Http\Controllers\FightController@index')
+    -> middleware(FightMiddleware::class);
+
